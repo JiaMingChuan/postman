@@ -1,0 +1,1640 @@
+{
+	"info": {
+		"_postman_id": "1ef441b0-8d50-416c-941c-3d0a70c46867",
+		"name": "Virax",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Homepage模块",
+			"item": [
+				{
+					"name": "轮播图列表",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v1/banners?limit=5",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"banners"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "轮播图列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/v1/banners?limit=5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"banners"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Feb 2023 10:55:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Clockwork-Id",
+									"value": "1677149708-0914-1825390588"
+								},
+								{
+									"key": "X-Clockwork-Version",
+									"value": "5.1.11"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "app; dur=13177.651166916; desc=\"Application\", db; dur=165.02; desc=\"Database\", timeline-event-0; dur=2861.741065979; desc=\"Controller\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":1,\"code\":200,\"data\":[{\"id\":1,\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/008800?text=accusamus\",\"destination\":\"generic-service\"},{\"id\":9,\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/009922?text=aliquam\",\"destination\":\"about-us\"},{\"id\":7,\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00aa66?text=quia\",\"destination\":\"products\"},{\"id\":10,\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00cc00?text=quis\",\"destination\":\"products\"},{\"id\":8,\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/0088cc?text=voluptatibus\",\"destination\":\"products\"}]}"
+						}
+					]
+				},
+				{
+					"name": "产品列表",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v1/products?is-top=1&page=1&page-size=6",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "is-top",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page-size",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "产品列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/v1/products?is-top=1&page=1&page-size=6",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									],
+									"query": [
+										{
+											"key": "is-top",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page-size",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Feb 2023 02:45:38 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Clockwork-Id",
+									"value": "1677206736-2412-264640280"
+								},
+								{
+									"key": "X-Clockwork-Version",
+									"value": "5.1.11"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "app; dur=3960.4041576385; desc=\"Application\", db; dur=70.52; desc=\"Database\", timeline-event-0; dur=1188.1711483002; desc=\"Controller\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":1,\"code\":200,\"data\":[{\"id\":20,\"product_category_id\":10,\"name\":\"Product - 20\",\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00ffbb?text=ab\",\"code\":\"63f6dfd92b05a\",\"price\":96,\"description\":\"Et facilis veniam sit blanditiis magni. Consequuntur provident veritatis illum incidunt. Sit est aliquid consectetur illum id. Quibusdam nisi labore ratione eligendi neque velit.\",\"description_image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00bb00?text=qui\"},{\"id\":1,\"product_category_id\":3,\"name\":\"Product - 1\",\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/005522?text=harum\",\"code\":\"63f6dfd91fd7f\",\"price\":7,\"description\":\"Vel consequuntur consequatur temporibus voluptatem fugiat. Asperiores aliquam fugit et et quasi quod. Iste possimus cumque sunt dolorem delectus voluptas. Et dolorum at possimus facere dolores.\",\"description_image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/0055bb?text=in\"},{\"id\":2,\"product_category_id\":7,\"name\":\"Product - 2\",\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/005577?text=occaecati\",\"code\":\"63f6dfd92094f\",\"price\":90,\"description\":\"Porro id laborum ex veritatis non non. Sunt aut velit voluptatem consequatur. Facere aut fuga odit est fuga.\",\"description_image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/0077ff?text=impedit\"},{\"id\":4,\"product_category_id\":7,\"name\":\"Product - 4\",\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/009977?text=aut\",\"code\":\"63f6dfd921c7d\",\"price\":59,\"description\":\"Qui officiis omnis voluptas reiciendis asperiores rerum quibusdam. Quibusdam eos amet qui neque quis.\",\"description_image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00aaee?text=asperiores\"},{\"id\":10,\"product_category_id\":7,\"name\":\"Product - 10\",\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00bb55?text=et\",\"code\":\"63f6dfd925595\",\"price\":67,\"description\":\"Reprehenderit saepe et consequuntur laboriosam. Fugiat rem quis qui. Enim reprehenderit ipsam dolor non. Totam distinctio aut in impedit dolorem.\",\"description_image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00cc66?text=sed\"},{\"id\":18,\"product_category_id\":2,\"name\":\"Product - 18\",\"image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/00aadd?text=neque\",\"code\":\"63f6dfd929e9a\",\"price\":33,\"description\":\"Vitae delectus nisi vel hic dolore. Excepturi omnis numquam voluptates facilis ipsum. Omnis ullam est sint at voluptas illo. Explicabo quisquam enim velit ut nemo aut.\",\"description_image\":\"https:\\/\\/via.placeholder.com\\/640x480.png\\/0022bb?text=vero\"}]}"
+						}
+					]
+				},
+				{
+					"name": "特别服务列表",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": "{{domain}}/api/v1/featured-services"
+					},
+					"response": [
+						{
+							"name": "特别服务列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": "{{domain}}/api/v1/featured-services"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Feb 2023 02:46:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Clockwork-Id",
+									"value": "1677206775-4314-2109207769"
+								},
+								{
+									"key": "X-Clockwork-Version",
+									"value": "5.1.11"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "app; dur=3530.8640003204; desc=\"Application\", db; dur=44.64; desc=\"Database\", timeline-event-0; dur=814.95404243469; desc=\"Controller\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":1,\"code\":200,\"data\":[{\"id\":1,\"tag\":\"a\",\"destination\":\"1\"},{\"id\":2,\"tag\":\"b\",\"destination\":\"2\"}]}"
+						}
+					]
+				},
+				{
+					"name": "产品分类列表",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": "{{domain}}/api/v1/product-categories"
+					},
+					"response": [
+						{
+							"name": "产品分类列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": "{{domain}}/api/v1/product-categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Feb 2023 10:51:39 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Clockwork-Id",
+									"value": "1677149505-6804-1532589497"
+								},
+								{
+									"key": "X-Clockwork-Version",
+									"value": "5.1.11"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "app; dur=5925.6861209869; desc=\"Application\", timeline-event-0; dur=804.73279953003; desc=\"Controller\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": 1,\n    \"code\": 200,\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"Type - 4[de]\",\n            \"slug\": \"type-4\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Type - 5[de]\",\n            \"slug\": \"type-5\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Type - 1[de]\",\n            \"slug\": \"type-1\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Type - 3[de]\",\n            \"slug\": \"type-3\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Type - 7[de]\",\n            \"slug\": \"type-7\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Type - 10[de]\",\n            \"slug\": \"type-10\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Type - 6[de]\",\n            \"slug\": \"type-6\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Type - 2[de]\",\n            \"slug\": \"type-2\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Type - 9[de]\",\n            \"slug\": \"type-9\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Type - 8[de]\",\n            \"slug\": \"type-8\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "查询最近的五条订单",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v1/orders?page=1&page-size=1&status=2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page-size",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FAQ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": "{{domain}}/api/v1/faqs"
+					},
+					"response": [
+						{
+							"name": "FAQ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": "{{domain}}/api/v1/faqs"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Feb 2023 10:52:18 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Clockwork-Id",
+									"value": "1677149532-3762-1956028746"
+								},
+								{
+									"key": "X-Clockwork-Version",
+									"value": "5.1.11"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "app; dur=10711.271047592; desc=\"Application\", db; dur=46.02; desc=\"Database\", timeline-event-0; dur=1773.7078666687; desc=\"Controller\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":1,\"code\":200,\"data\":[{\"id\":3,\"question\":\"3\",\"answer\":\"3\"},{\"id\":2,\"question\":\"2\",\"answer\":\"2\"}]}"
+						}
+					]
+				},
+				{
+					"name": "banner-自定义页面",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v1/custom-pages/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom-pages",
+								"1"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports模块",
+			"item": [
+				{
+					"name": "获取报告列表",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "de",
+								"type": "default"
+							}
+						],
+						"url": "{{domain}}/api/v1/reports"
+					},
+					"response": [
+						{
+							"name": "获取报告列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": "{{domain}}/api/v1/reports"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Mar 2023 10:22:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Clockwork-Id",
+									"value": "1677666147-1588-1899346271"
+								},
+								{
+									"key": "X-Clockwork-Version",
+									"value": "5.1.11"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "app; dur=3843.1460857391; desc=\"Application\", db; dur=66.59; desc=\"Database\", timeline-event-0; dur=1094.7320461273; desc=\"Controller\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":1,\"code\":200,\"data\":[{\"id\":1,\"type\":\"C-de\",\"created\":\"2023-02-15 17:22:37\",\"validUntil\":\"2023-03-07 17:03:37\",\"storagePeriod\":\"6 Days\"},{\"id\":2,\"type\":\"A-de\",\"created\":\"2023-02-10 17:22:41\",\"validUntil\":\"2023-03-02 17:03:41\",\"storagePeriod\":\"1 Days\"}]}"
+						}
+					]
+				},
+				{
+					"name": "获取报告详情",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{domain}}/api/v1/reports/63d8e53efc1b6cc7c0cf47d5"
+					},
+					"response": []
+				},
+				{
+					"name": "检测报告生成pdf",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{domain}}/api/v1/reports/sendPDF"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User模块",
+			"item": [
+				{
+					"name": "注册",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"odit\",\n    \"last_name\": \"impedit\",\n    \"gender\": \"0\",\n    \"birthday\": \"2023-02\",\n    \"security_question_id\": 1,\n    \"security_question_answer\": 1,\n    \"email\": \"1214143033@qq.com\",\n    \"code\": \"654321\",\n    \"password\": \"Mingchuan123.\",\n    \"country_id\": 2,\n    \"prefer_language\": \"de\",\n    \"password_confirmation\": \"Mingchuan123.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/api/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "登录",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"",
+									"pm.environment.set(\"token\", data.data.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"1214143033@qq.com\",\n    \"password\": \"Password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/api/v1/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "删除用户",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mingchuan.jia@mobilenowgroup.com",
+									"type": "default"
+								},
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{domain}}/api/v1/users/destroy"
+					},
+					"response": []
+				},
+				{
+					"name": "删除用户 Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/delete-account?email=1214143033@qq.com",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"delete-account"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "1214143033@qq.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "获取第三方检测报告",
+			"item": [
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "Create an order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"const jsonData = pm.response.json();",
+											"",
+											"if (jsonData) {",
+											"    pm.environment.set(\"AVAILABLE_ORDER_NUMBER\", jsonData.orderNumber);",
+											"}",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-Key",
+										"value": "{{API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"productCode\": \"{{PRODUCT_CODE}}\",\n     \"quantity\": 1,\n     \"firstName\": \"Fayne\",\n     \"lastName\": \"Guo\",\n     \"deliveryAddress1\": \"130 Plumstead Road\",\n     \"deliveryAddress2\": \"Plumstead\",\n     \"deliveryCity\": \"London\",\n     \"deliveryPostcode\": \"SE18 7DW\",\n     \"deliveryCounty\": \"Greater London\",\n     \"deliveryCountryCode\": \"GB\",\n     \"email\": \"fayne@mobilenowgroup.com\",\n     \"mobileCountryCode\": \"44\",\n     \"mobileNumber\": \"77777777777\",\n     \"notes\": \"Leave in the garden.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{ENDPOINT}}/orders/v2"
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve a list of orders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-Key",
+										"value": "{{API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{ENDPOINT}}/orders/v2"
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel an order",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-API-Key",
+										"value": "{{API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"productCode\": \"C1BLP03200\",\n     \"quantity\": 1,\n     \"firstName\": \"Fayne\",\n     \"lastName\": \"Guo\",\n     \"deliveryAddress1\": \"130 Plumstead Road\",\n     \"deliveryAddress2\": \"Plumstead\",\n     \"deliveryCity\": \"London\",\n     \"deliveryPostcode\": \"SE18 7DW\",\n     \"deliveryCounty\": \"Greater London\",\n     \"deliveryCountryCode\": \"GB\",\n     \"email\": \"fayne@mobilenowgroup.com\",\n     \"mobileCountryCode\": \"44\",\n     \"mobileNumber\": \"77777777777\",\n     \"notes\": \"Leave in the garden.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{ENDPOINT}}/orders/v2/{{AVAILABLE_ORDER_NUMBER}}/cancel"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Test",
+					"item": [
+						{
+							"name": "Get all tests",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"const jsonData = pm.response.json();",
+											"",
+											"if (jsonData) {",
+											"    pm.environment.set(\"AVAILABLE_TEST_ID\", jsonData.data[0].id);",
+											"}",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-Key",
+										"value": "{{API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{ENDPOINT}}/tests/v2"
+							},
+							"response": [
+								{
+									"name": "Get all tests",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-API-Key",
+												"value": "{{API_KEY}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": "{{ENDPOINT}}/tests/v2"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 27 Feb 2023 03:47:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1042"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "x-amzn-RequestId",
+											"value": "96eb4ace-dd4c-4111-bcdd-fbf1bade70ce"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "x-amzn-Remapped-Content-Length",
+											"value": "1042"
+										},
+										{
+											"key": "x-amzn-Remapped-Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "x-amz-apigw-id",
+											"value": "A-spsGiDjoEF-Qw="
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"412-Y59iV5gVxKke8/vIm8C7Reld3xU\""
+										},
+										{
+											"key": "x-amzn-Remapped-Date",
+											"value": "Mon, 27 Feb 2023 03:47:37 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"limit\": \"50\",\n    \"offset\": \"0\",\n    \"data\": [\n        {\n            \"id\": \"63d8e53efc1b6cc7c0cf47d5\",\n            \"kitId\": \"GTUP7861\",\n            \"productCode\": \"C1BLP03200\",\n            \"status\": \"ACCESSIONING\",\n            \"metadata\": {\n                \"dateOfBirth\": \"1992-01-05\",\n                \"gender\": \"f\"\n            },\n            \"registeredAt\": \"2023-01-31T09:54:06.288Z\",\n            \"specimens\": [\n                {\n                    \"id\": \"63d8e53efc1b6cc7c0cf47d6\",\n                    \"barcode\": \"50000076368137\",\n                    \"status\": \"ACCESSIONED\",\n                    \"testId\": \"63d8e53efc1b6cc7c0cf47d5\",\n                    \"registeredAt\": \"2023-01-31T09:54:03.533Z\",\n                    \"accessionedAt\": \"2023-01-31T09:56:01.462Z\",\n                    \"specimenType\": \"CAPILLARY_BLOOD_MICROTAINER\"\n                }\n            ],\n            \"biomarkerResults\": [\n                {\n                    \"biomarker\": {}\n                }\n            ],\n            \"productDisclaimer\": null\n        },\n        {\n            \"id\": \"63d8e210a1ea79408dc73ae5\",\n            \"kitId\": \"CAMC5405\",\n            \"productCode\": \"C1BLP03200\",\n            \"status\": \"REGISTERED\",\n            \"metadata\": {\n                \"dateOfBirth\": \"1998-02-09\",\n                \"gender\": \"f\"\n            },\n            \"registeredAt\": \"2023-01-31T09:40:32.889Z\",\n            \"specimens\": [\n                {\n                    \"id\": \"63d8e210a1ea79408dc73ae6\",\n                    \"barcode\": \"50000100604755\",\n                    \"status\": \"REGISTERED\",\n                    \"testId\": \"63d8e210a1ea79408dc73ae5\",\n                    \"registeredAt\": \"2023-01-31T09:40:29.992Z\",\n                    \"specimenType\": \"CAPILLARY_BLOOD_MICROTAINER\"\n                }\n            ],\n            \"biomarkerResults\": [\n                {\n                    \"biomarker\": {}\n                }\n            ],\n            \"productDisclaimer\": null\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get specific test",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-Key",
+										"value": "{{API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{ENDPOINT}}/tests/v2/{{AVAILABLE_TEST_ID}}"
+							},
+							"response": [
+								{
+									"name": "Get specific test",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-API-Key",
+												"value": "{{API_KEY}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": "{{ENDPOINT}}/tests/v2/{{AVAILABLE_TEST_ID}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 27 Feb 2023 03:48:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "525"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "x-amzn-RequestId",
+											"value": "fff9374b-286c-403c-8a64-8bb78185b78d"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "x-amzn-Remapped-Content-Length",
+											"value": "525"
+										},
+										{
+											"key": "x-amzn-Remapped-Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "x-amz-apigw-id",
+											"value": "A-s1PHo-joEFc2g="
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"20d-huWyyLaaaEc4T9Lv2QXZAp++ZZ4\""
+										},
+										{
+											"key": "x-amzn-Remapped-Date",
+											"value": "Mon, 27 Feb 2023 03:48:49 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"63d8e53efc1b6cc7c0cf47d5\",\n    \"kitId\": \"GTUP7861\",\n    \"productCode\": \"C1BLP03200\",\n    \"status\": \"ACCESSIONING\",\n    \"metadata\": {\n        \"dateOfBirth\": \"1992-01-05\",\n        \"gender\": \"f\"\n    },\n    \"registeredAt\": \"2023-01-31T09:54:06.288Z\",\n    \"specimens\": [\n        {\n            \"id\": \"63d8e53efc1b6cc7c0cf47d6\",\n            \"barcode\": \"50000076368137\",\n            \"status\": \"ACCESSIONED\",\n            \"testId\": \"63d8e53efc1b6cc7c0cf47d5\",\n            \"registeredAt\": \"2023-01-31T09:54:03.533Z\",\n            \"accessionedAt\": \"2023-01-31T09:56:01.462Z\",\n            \"specimenType\": \"CAPILLARY_BLOOD_MICROTAINER\"\n        }\n    ],\n    \"biomarkerResults\": [\n        {\n            \"biomarker\": {}\n        }\n    ],\n    \"productDisclaimer\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Get specimens for specific test ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-Key",
+										"value": "{{API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{ENDPOINT}}/tests/v2/{{AVAILABLE_TEST_ID}}/specimens"
+							},
+							"response": [
+								{
+									"name": "Get specimens for specific test ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-API-Key",
+												"value": "{{API_KEY}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": "{{ENDPOINT}}/tests/v2/{{AVAILABLE_TEST_ID}}/specimens"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "JSON",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 27 Feb 2023 03:50:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "282"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "x-amzn-RequestId",
+											"value": "48017d7d-ff1d-4ded-b9f2-1c985184cb90"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "x-amzn-Remapped-Content-Length",
+											"value": "282"
+										},
+										{
+											"key": "x-amzn-Remapped-Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "x-amz-apigw-id",
+											"value": "A-tF-Ft9joEFmHA="
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"11a-9ULKtv3xVVaw/Wlu0w+CVwXUhA0\""
+										},
+										{
+											"key": "x-amzn-Remapped-Date",
+											"value": "Mon, 27 Feb 2023 03:50:36 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\"limit\":50,\"offset\":0,\"data\":[{\"id\":\"63d8e53efc1b6cc7c0cf47d6\",\"barcode\":\"50000076368137\",\"status\":\"ACCESSIONED\",\"testId\":\"63d8e53efc1b6cc7c0cf47d5\",\"registeredAt\":\"2023-01-31T09:54:03.533Z\",\"accessionedAt\":\"2023-01-31T09:56:01.462Z\",\"specimenType\":\"CAPILLARY_BLOOD_MICROTAINER\"}]}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Generate public token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"const jsonData = pm.response.json();",
+											"",
+											"if (jsonData) {",
+											"    pm.environment.set(\"PARTNER_PUBLIC_TOKEN\", jsonData.publicToken);",
+											"}",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-Key",
+										"value": "{{API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"partnerUserId\": \"{{PARTNER_USER_ID}}\",\n    \"email\": \"{{PARTNER_EMAIL}}\",\n    \"firstName\": \"Fayne\",\n    \"lastName\": \"Guo\",\n    \"dateOfBirth\": \"2000-12-31\",\n    \"sex\": \"m\"\n}"
+								},
+								"url": "{{ENDPOINT}}/users/v1/tokens/public"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "应用场景（scenarios）",
+			"item": [
+				{
+					"name": "静态内容（static contents）",
+					"item": [
+						{
+							"name": "homepage banner",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var limit = 2;",
+											"pm.collectionVariables.set('limit', limit);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\",function(){",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/v1/banners?limit={{limit}}",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"banners"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "{{limit}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "banner-自定义页面",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var id = 2;",
+											"pm.collectionVariables.set('id', id);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\",function(){",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": "{{domain}}/api/v1/custom-pages/{{id}}"
+							},
+							"response": []
+						},
+						{
+							"name": "FAQ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\",function(){",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": "{{domain}}/api/v1/faqs"
+							},
+							"response": []
+						},
+						{
+							"name": "特别服务列表",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\",function(){",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept-language",
+										"value": "de",
+										"type": "default"
+									}
+								],
+								"url": "{{domain}}/api/v1/featured-services"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "limit",
+			"value": ""
+		},
+		{
+			"key": "id",
+			"value": ""
+		}
+	]
+}
